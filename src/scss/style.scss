@@ -1,0 +1,495 @@
+@import "mixin";
+$blueColor: #18b2ff;
+$blueHoverColor: #5C7AFF;
+
+@font-face {
+    font-family: "iconfont";
+    src: url("font/iconfont.eot?t=1487139706310");
+    /* IE9*/
+    src:url('font/iconfont.eot?t=1487139706310#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('font/iconfont.woff?t=1487139706310') format('woff'),
+    /* chrome, firefox */
+    url('font/iconfont.ttf?t=1487139706310') format('truetype'),
+    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('font/iconfont.svg?t=1487139706310#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-notebook:before {
+    content: "\e601";
+}
+.icon-watch:before {
+    content: "\e602";
+}
+.icon-client:before {
+    content: "\e603";
+}
+.icon-exit:before {
+    content: "\e604";
+}
+.icon-user:before {
+    content: "\e605";
+}
+.icon-password:before {
+    content: "\e606";
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body,
+button,
+input,
+textarea {
+    font-family: "Source Han Sans","microsoft yahei";
+    font-size: 40px;
+}
+body{
+    font-size:50px;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+li,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+a,
+button,
+img {
+    border: none;
+    outline: 0 none;
+}
+.f-left {
+    float: left;
+}
+.f-right {
+    float: right;
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: thin dotted;
+    outline: 0 auto -webkit-focus-ring-color;
+    outline-offset: 0;
+}
+.btn {
+    background-color: $blueColor;
+    border-color: $blueColor;
+    @include radius(10px);
+    color: #FFFFFF;
+    &:hover {
+        background-color: $blueHoverColor;
+        border-color: $blueHoverColor;
+    }
+}
+/*登录*/
+.login-wrapper {
+    width: 530px;
+    margin: 0 auto;
+    text-align: center;
+    .login-header {
+        width: 190px;
+        margin: 50px auto;
+        .sys-name {
+            font-size: 16px;
+            color: $blueColor;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+    }
+    .login-panel {
+        width: 488px;
+        height: 394px;
+        @include radius(10px);
+        @include shadow(0 0 20px rgba(0,0,0,0.3));
+        padding: 50px 0;
+        .login-font {
+            color: $blueColor;
+            font-size: 36px;
+            margin: 0 auto 40px;
+        }
+        .form-group {
+            width: 56%;
+            margin: 10px auto;
+            position: relative;
+            .icon {
+                position: absolute;
+                z-index: 10;
+                left: 7px;
+                top: 1px;
+                font-size: 24px;
+                color: $blueColor;
+            }
+            .form-control {
+                padding-left: 35px;
+                @include radius(10px);
+                border-color: #D2D2D2;
+            }
+            .help-block {
+                font-size: 14px;
+                color: #DDDDDD;
+                margin-top: 10px;
+            }
+        }
+        .btn-login {
+            width: 146px;
+            height: 58px;
+            font-size: 24px;
+            margin-top: 25px;
+        }
+    }
+}
+/*列表*/
+.main {
+    position: relative;
+}
+.main-header {
+    position: absolute;
+    z-index: 100;
+    padding: 0 1%;
+    width: 100%;
+    background-color: #FFF;
+    @include shadow(0 7px 20px rgba(0, 0, 0, .3));
+    height: 55px;
+    .h-logo {
+        display: block;
+        margin-top: 12px;
+        img {
+            width: 100px;
+            background-size: cover;
+        }
+    }
+    .h-sys {
+        display: block;
+        margin-left: 15px;
+        margin-top: 19px;
+        font-size: 14px;
+        color: $blueColor;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .h-infor {
+        letter-spacing: 1px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: #666;
+        .h-time {
+            margin-right: 10px;
+        }
+        .h-username,
+        .icon-exit {
+            color: $blueColor;
+        }
+        .h-exit a {
+            color: #666;
+        }
+    }
+}
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 55px;
+    width: 106px;
+    background-color: #333333;
+    border-right: 1px solid #a6a6a6;
+    box-sizing: content-box;
+    z-index: 10;
+    .nav-menu {
+        width: 106px;
+        padding: 15px 0;
+        text-align: center;
+        border-bottom: 1px solid #30434d;
+        overflow: hidden;
+        a{
+            color: $blueColor;
+            display: block;
+            .icon {
+                font-size: 36px;
+            }
+            .menu-name {
+                font-size: 14px;
+                display: block;
+            }
+            
+        }
+    }
+    .active,
+    .nav-menu:hover {
+        background-color: #F2F2F2;
+    }
+}
+.main-content {
+    position: absolute;
+    padding-left: 107px;
+    width: 100%;
+    top: 55px;
+    .page-list {
+        width: 80%;
+        margin: 100px auto;
+        .form-group {
+            width: 40%;
+            margin: 0 auto;
+            .form-control {
+                width: 70%;
+                padding-top: 10px;
+                padding-bottom: 9px;
+                padding-bottom: 11px\0;
+                @include radius(10px);
+            }
+            .btn-login {
+                margin-left: 15px;
+                padding: 8px 22px;
+                font-size: 18px;
+            }
+            .pro-title {
+                text-align: center;
+            }
+        }
+        .table-container {
+            position: relative;
+            margin-top: 40px;
+            .btn-check {
+                color: #FFFFFF;
+                font-size: 14px;
+                padding: 3px 15px;
+                &:hover{
+                    color: #FFFFFF;
+                }
+            }
+            .table {
+                border-bottom: 1px solid #dddddd;
+                td,
+                th {
+                    border-color: #dddddd;
+                    vertical-align: middle;
+                    font-size: 14px;
+                    color: #000000;
+                }
+                .border-bottom-none {
+                    border-bottom: none;
+                }
+            }
+            .control-table{
+                th,td{
+                    height: 58px;
+                }
+                td{
+                    background-color: #F2F2F2;
+                }
+            }
+            .table-th {
+                tr{
+                    &:nth-child(even){
+                        background-color: #F2F2F2;
+                    }
+                    td,
+                    th {
+                        text-align: center;
+                        vertical-align: middle;
+                        height: 58px;
+                    }
+                    th{
+                        color: $blueColor;
+                        font-size: 16px;
+                    }
+                    td{
+                        font-size: 14px;
+                        a{
+                           color: $blueColor; 
+                           text-decoration: underline;
+                           &:hover{
+                               color: $blueHoverColor;
+                           }
+                        }
+                    }
+                }
+            }
+            .red {
+                color: red;
+                font-size: 14px;
+                text-align: right;
+                margin-top: 10px;
+            }
+        }
+        nav {
+            text-align: center;
+            .pagination {
+                margin: 100px auto 0;
+                li > a,
+                li > span {
+                    margin: 3px;
+                    width: 38px;
+                    height: 38px;
+                    line-height: 38px;
+                    @include radius(10px);
+                    padding: 0;
+                    text-align: center;
+                    color: #707070;
+                    border-color: #707070;
+                }
+                .disabled {
+                    a {
+                        background-color: #F9F9F9;
+                        border-color: #e1e1e1;
+                        color: #e1e1e1;
+                    }
+                }
+                .active {
+                    a {
+                        background-color: $blueColor;
+                        border-color: $blueColor;
+                        color: #FFFFFF;
+                    }
+                }
+                .dot {
+                    span {
+                        border: none;
+                        &:hover {
+                            background-color: #FFFFFF;
+                        }
+                    }
+
+                }
+            }
+        }
+        .client-msg {
+            width: 400px;
+            margin: 30px auto;
+            .form-group {
+                width: 100%;
+                margin: 20px 0;
+                label {
+                    text-align: right;
+                    width: 28%;
+                    margin-top: 10px;
+                }
+                .form-control {
+                    width: 72%;
+                    padding: 0.375rem 0.75rem;
+                    @include radius(10px)
+                }
+            }
+        }
+            .btn-save {
+                padding: 0;
+                width: 206px;
+                height: 44px;
+                font-size: 20px;
+                @include radius(10px);
+                display: block;
+                margin-left: 28%;
+            }
+      .mt80{
+            margin-top: 80px;
+        }
+        .echarts-container{
+            width: 80%;
+            height: 570px;
+            margin: 40px auto;
+        }
+        .param{
+            width: 500px;
+            text-align: center;
+            margin: 70px auto;
+           .btn-save{
+               margin-left: 32px;
+           } 
+        }
+
+    }
+
+    .control-nav {
+        li {
+            height: 53px;
+            line-height: 53px;
+            float: left;
+            width: 25%;
+            border-right: 2px solid #e7e7e7;
+            border-bottom: 2px solid #e7e7e7;
+            background-color: #F2F2F2;
+            text-align: center;
+            a{
+                color: #000000;
+            }
+        }
+        .active {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid $blueColor;
+            a{
+                color: $blueColor;
+            }
+        }
+    }
+    .control-name {
+        color: $blueColor;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold
+    }
+}
+.update-panel {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -233px;
+    margin-left: -250px;
+    .modal-title {
+        color: $blueColor;
+        font-size: 24px;
+    }
+    .modal-body {
+        padding-top: 30px;
+        .form-group {
+            padding: 0 3%;
+            label {
+                text-align: right;
+                width: 30%;
+                margin-top: 6px;
+            }
+            .form-control {
+                width: 64%;
+                @include radius(10px)
+            }
+        }
+    }
+    .modal-footer {
+        border-top: none;
+        text-align: center;
+        padding: 0 0 30px;
+        .btn-save {
+            padding: 0;
+            width: 162px;
+            height: 58px;
+            font-size: 20px;
+            @include radius(10px)
+        }
+    }
+    .modal-content {
+        @include radius(30px)
+    }
+}
