@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>未度--分享动态</title>
+	<title>未度--第三方平台邀请页面</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<!-- 为移动设备添加 viewport -->
 		<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
@@ -17,41 +17,12 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
 <body>
-	<header class="bg-white exercise-data">
-		<div class="user-info clearfix">
-			<span class="user-photo"><img src="" onerror="this.src='img/user_photo.png'"/></span>
-			<div class="user-info-other">
-				<h4 class="user-name">大脸猫666</h4>
-				<h5 class="issue-time">6分钟前</h5>
-			</div>
-		</div>
-		<div class="energy-info clearfix">
-			<h5 class="tit">骑行距离</h5>
-			<span class="num">总电量<b class="number">:200</b>千焦耳</span>
-		</div>
-		<div class="distance"><b class="number">170</b><span class="unit">&nbsp;&nbsp;千米</span></div>
-		<div class="rt-data">
-			<ul class="clearfix">
-				<li>
-					<h5>最高速度</h5>
-					<b class="number">120</b>
-					<p>公里/小时</p>
-				</li>
-				<li>
-					<h5>最高功率</h5>
-					<b class="number">120</b>
-					<p>瓦特</p>
-				</li>
-				<li>
-					<h5>总体消耗</h5>
-					<b class="number">120</b>
-					<p>卡路里</p>
-				</li>
-			</ul>
-		</div>
+	<header class="bg-white in-motion">
+		<span class="invite-img"><img src="img/photo2.jpg"/></span>
+		<p class="invite-font">chasel正在骑行，邀您一起参加多人运动啦</p>
 	</header>
 	<section class="bg-white exercise-group">
-		<h5 class="group-tit">正在运动的群</h5>
+		<h5 class="group-tit">未度热门动态</h5>
 		<div class="group-list">
 			<ul class="clearfix">
 				<li><a href=""><img src="img/photo.jpg" alt="" /></a></li>
@@ -94,6 +65,12 @@
 			</ul>
 		</div>
 	</section>
+	<section class="bg-white website-intro" id="wdWeb">
+		<h3 class="intro-tit">官网介绍</h3>
+		<article class="intro-content">
+			支付宝,全球领先的独立第三方支付平台,致力于为广大用户提供安全快速的电子支付/网上支付/安全支付/手机支付体验,及转账收款/水电煤缴费/信用卡还款/AA收款等生活...
+		</article>
+	</section>
 	<footer class="download-box clearfix" id="downloadBox">
 		<span class="app-name">未度运动单车APP<br/>您身边的环保骑行专家</span>
 			<button class="btn open-btn">打开</button>
@@ -101,8 +78,8 @@
 	</footer>
 	<script type="text/javascript">
 		var mb = document.getElementById("downloadBox").offsetHeight;
-		var news = document.getElementById("news");
-		news.style.marginBottom = mb + 'px';
+		var web = document.getElementById("wdWeb");
+		web.style.marginBottom = mb + 'px';
 	</script>
 </body>
 </html>

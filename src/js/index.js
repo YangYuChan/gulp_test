@@ -1,3 +1,1 @@
-window.onload = function(){
-	console.log("aaaaa")
-};
+console.log("这是js文件")
