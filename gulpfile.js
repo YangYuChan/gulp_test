@@ -7,11 +7,11 @@ var gulp = require('gulp'), //本地安装gulp所用到的地方
     htmlmin = require('gulp-minify-html'), //本地安装gulp-htmlmin压缩html文件
     imagemin = require('gulp-imagemin'),//压缩图片
     rev = require('gulp-rev'), //添加版本号
-    rename = require('gulp-rename'), //添加版本号
+    rename = require('gulp-rename'), //添加重命名文件
     autoprefixer = require('gulp-autoprefixer'), //设置浏览器版本自动处理浏览器前缀
     livereload = require('gulp-livereload'),  //当监听文件发生变化时，浏览器自动刷新页面
-    watch = require('gulp-watch'); //监听
-	webserver = require('gulp-webserver'); //本地服务器
+    watch = require('gulp-watch'), //监听
+    webserver = require('gulp-webserver'); //本地服务器
 	
 	
 	
